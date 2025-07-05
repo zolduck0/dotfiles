@@ -7,3 +7,4 @@ my dotfiles for my arch linux rice (+ wallpapers)
 * waybar
 * ly
 * kitty
+* fuzzel
