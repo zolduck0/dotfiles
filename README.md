@@ -1,5 +1,5 @@
 # dotfiles
-my dotfiles for my arch linux rice
+my dotfiles for my arch linux rice (+ wallpapers)
 
 # software used
 * hyprland
