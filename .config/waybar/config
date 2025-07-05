@@ -1,0 +1,94 @@
+{
+"output": "HDMI-A-1",
+"layer": "top",
+//"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "top",
+"spacing": 6,
+"fixed-center": true,
+"ipc": true,
+"margin-top": 0,
+"margin-left": 0,
+"margin-right": 0,
+"height": 1,
+
+"modules-left": ["hyprland/workspaces"],
+"modules-center": ["custom/player", "custom/timer", "custom/timer-status"],
+"modules-right": ["clock", "pulseaudio", "memory", "cpu"],
+
+
+"hyprland/workspaces": {
+	"format": "{icon}",
+	"format-icons": {
+		"1": "  Code",
+		"2": " Notes",
+		"3": " Art",
+		"4": " 3D",
+		"5": " Audio",
+		"6": " Terminal",
+		"7": " Music",
+		"8": " Schedule",
+		"9": " Monitor 2"
+		}
+},
+
+"custom/player":
+{
+  "exec": "playerctl metadata --format '{{ artist }} - {{ title }}' | sed 's/&/&amp;/g' || echo 'No music'",
+  "return-type": "text",
+  "interval": 2,
+  "on-click": "playerctl play-pause",
+  "on-scroll-down": "playerctl next",
+  "on-scroll-up": "playerctl previous",
+  "on-click-middle": "hyprctl dispatch workspace 7",
+  "tooltip": true,
+  "tooltip-format": "Now playing: {{ artist }} - {{ title }}"
+},
+
+"custom/timer":
+{
+  "format": "| {} |",
+    "exec": "~/.local/bin/zoltime time",
+    "interval": 1,
+    "on-click": "bash ~/.local/bin/zoltime toggle",
+    "on-click-right": "bash ~/.local/bin/zoltime stop",
+    "tooltip": false
+},
+
+"custom/timer-status":
+{
+    "format": "[{}]",
+    "exec": "~/.local/bin/zoltime status",
+    "interval": 1,
+    "on-click": "bash ~/.local/bin/zoltime set-work",
+    "on-click-right": "bash ~/.local/bin/zoltime set-rest",
+    "tooltip": false
+},
+
+"clock": {
+  "format": " {}",
+  "tooltip": true,
+  "tooltip-format": "{}",
+  "format-alt": " {:%H:%M:%S}",
+  "interval": 1,
+  "timezone": null
+},
+
+"memory": {
+  "format": " {used:0.1f}G",
+  "tooltip": true
+},
+
+"cpu": {
+  "format": " {usage}%",
+  "tooltip": true
+},
+
+"pulseaudio": {
+  "format": " {volume}%",
+  "format-muted": "  Muted",
+  "on-click": "pavucontrol"
+}
+
+}
