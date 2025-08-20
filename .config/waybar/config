@@ -15,21 +15,22 @@
 
 "modules-left": ["hyprland/workspaces"],
 "modules-center": ["custom/player", "custom/timer", "custom/timer-status"],
-"modules-right": ["clock", "pulseaudio", "memory", "cpu"],
+"modules-right": ["clock", "pulseaudio", "memory"],
 
 
 "hyprland/workspaces": {
 	"format": "{icon}",
 	"format-icons": {
-		"1": "  Code",
-		"2": " Notes",
-		"3": " Art",
-		"4": " 3D",
-		"5": " Audio",
-		"6": " Terminal",
-		"7": " Music",
-		"8": " Schedule",
-		"9": " Monitor 2"
+		"1": "   Code",
+		"2": "  Notes",
+		"3": "  Art",
+		"4": "  3D",
+		"5": "  Audio",
+		"6": "  Terminal",
+		"7": "  Music",
+		"8": "  Schedule",
+		"9": "  Monitor 2",
+    "10": "  Testing"
 		}
 },
 
@@ -67,26 +68,37 @@
 },
 
 "clock": {
-  "format": " {}",
+  "format": "  {}",
   "tooltip": true,
-  "tooltip-format": "{}",
-  "format-alt": " {:%H:%M:%S}",
+  "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+  "calendar": {
+    "mode": "month",
+    "mode-mon-col": 3,
+    "weeks-pos": "right",
+    "on-click-right": "mode",
+    "on-scroll": 1
+  },
+  "actions": {
+    "on-click-right": "mode",
+    "on-scroll-up": "shift_up",
+    "on-scroll-down": "shift_down"
+  },
   "interval": 1,
   "timezone": null
 },
 
 "memory": {
-  "format": " {used:0.1f}G",
+  "format": "  {used:0.1f}G",
   "tooltip": true
 },
 
 "cpu": {
-  "format": " {usage}%",
+  "format": "  {usage}%",
   "tooltip": true
 },
 
 "pulseaudio": {
-  "format": " {volume}%",
+  "format": "   {volume}%",
   "format-muted": "  Muted",
   "on-click": "pavucontrol"
 }
