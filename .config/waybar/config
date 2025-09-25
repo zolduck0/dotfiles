@@ -30,7 +30,7 @@
 		"7": "  Music",
 		"8": "  Schedule",
 		"9": "  Monitor 2",
-    "10": "  Testing"
+    "10": "   Testing"
 		}
 },
 
@@ -44,26 +44,27 @@
   "on-scroll-up": "playerctl previous",
   "on-click-middle": "hyprctl dispatch workspace 7",
   "tooltip": true,
-  "tooltip-format": "Now playing: {{ artist }} - {{ title }}"
+  "tooltip-format": "Now playing: {{ artist }} - {{ title }}",
+  "max-length": 40
 },
 
 "custom/timer":
 {
   "format": "| {} |",
-    "exec": "~/.local/bin/zoltime time",
+    "exec": "/usr/bin/zoltime time",
     "interval": 1,
-    "on-click": "bash ~/.local/bin/zoltime toggle",
-    "on-click-right": "bash ~/.local/bin/zoltime stop",
+    "on-click": "bash /usr/bin/zoltime toggle",
+    "on-click-right": "bash /usr/bin/zoltime stop",
     "tooltip": false
 },
 
 "custom/timer-status":
 {
     "format": "[{}]",
-    "exec": "~/.local/bin/zoltime status",
+    "exec": "/usr/bin/zoltime status",
     "interval": 1,
-    "on-click": "bash ~/.local/bin/zoltime set-work",
-    "on-click-right": "bash ~/.local/bin/zoltime set-rest",
+    "on-click": "bash /usr/bin/zoltime set-work",
+    "on-click-right": "bash /usr/bin/zoltime set-rest",
     "tooltip": false
 },
 

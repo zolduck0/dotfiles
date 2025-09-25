@@ -24,13 +24,13 @@ color14 #57d1ea
 color7 #c4c4b5
 color15 #f6f6ee
 selection_foreground #191919
-background_opacity 0.1
+background_opacity 0.85
 
 confirm_os_window_close 0
 
 
 # BEGIN_KITTY_FONTS
-font_family      family="VCR OSD Mono"
+font_family      family="Libertinus Mono"
 bold_font        auto
 italic_font      auto
 bold_italic_font auto

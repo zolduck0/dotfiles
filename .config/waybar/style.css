@@ -1,23 +1,20 @@
 window
 {
-	background-color: rgba(255,255,255,0.15);
+	background-color: rgba(124,235,225,0.5);
 	font-size: 14px;
-	font-family: "Libertinus Serif", "JetBrainsMono Nerd Font", sans-serif;
+	font-family: "Arial", "JetBrainsMono Nerd Font", sans-serif;
 	padding-top: 0;
 	padding-bottom: 0;
 	margin: 0px;
-	color: white;
+  color: rgba(255,255,255,0.8);
 }
 
-/*
 .modules-left
 {
-	background-color: rgba(255,255,255,1);
 	border-radius: 6px;
-	color: white;
 }
 
-*/
+
 .modules-center
 {
 	padding-left: 2px;
@@ -26,5 +23,5 @@ window
 .module, button {
     padding-right: 10px;
     margin: 0;
-    color: white;
+    color: rgba(255,255,255,0.8);
 }

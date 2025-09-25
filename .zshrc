@@ -124,6 +124,7 @@ export PATH=$PATH:/home/zolduck/.spicetify
 alias help='cat /home/zolduck/alias.txt'
 alias zol='cd /home/zolduck/ZOLDUCK/'
 alias zolw='cd /home/zolduck/ZOLDUCK/workspace/'
+alias neo='cd /home/zolduck/ZOLDUCK/Arthur-Becker/zolduck-neocities/'
 alias ir='cd /home/zolduck/ZOLDUCK/GAMES/2023/02-07\ until\ 31-12/INSPECTION\ REPORT/INSPECTION-REPORT/'
 alias irs='cd /home/zolduck/ZOLDUCK/GAMES/2023/02-07\ until\ 31-12/INSPECTION\ REPORT/INSPECTION-REPORT/datafiles/assets/json/'
 alias irv='cd /home/zolduck/ZOLDUCK/GAMES/2023/02-07\ until\ 31-12/INSPECTION\ REPORT/INSPECTION-REPORT/datafiles/assets/vbuff'
