@@ -1,27 +1,49 @@
-window
+window#waybar
 {
-	background-color: rgba(124,235,225,0.5);
-	font-size: 14px;
-	font-family: "Arial", "JetBrainsMono Nerd Font", sans-serif;
+  background: transparent;
+	font-size: 15px;
+	font-family: "Trebuchet MS", sans-serif;
+  -webkit-font-smoothing:none;
 	padding-top: 0;
 	padding-bottom: 0;
 	margin: 0px;
-  color: rgba(255,255,255,0.8);
+  color: rgba(150, 142, 196, 255);
 }
 
 .modules-left
 {
+  border-radius: 12px;
 	border-radius: 6px;
+  background-color: #191916;
 }
-
 
 .modules-center
 {
+  border-radius: 12px;
 	padding-left: 2px;
+  background-color: #191916;
 }
 
 .module, button {
-    padding-right: 10px;
-    margin: 0;
-    color: rgba(255,255,255,0.8);
+  border-radius: 12px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: 0;
+  background-color: #191916;
+  color: rgba(150, 142, 196, 255);
+}
+
+button
+{
+  border:none;
+  box-shadow:none;
+  outline:none;
+}
+
+#workspaces button.focused{
+  color: rgba(194, 153, 80, 1);
+}
+
+#workspaces button:hover{
+  color: rgba(194, 153, 80, 255);
 }

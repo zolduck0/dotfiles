@@ -1,107 +1,110 @@
 {
-"output": "HDMI-A-1",
-"layer": "top",
-//"mode": "dock",
-"exclusive": true,
-"passthrough": false,
-"position": "top",
-"spacing": 6,
-"fixed-center": true,
-"ipc": true,
-"margin-top": 0,
-"margin-left": 0,
-"margin-right": 0,
-"height": 1,
-
-"modules-left": ["hyprland/workspaces"],
-"modules-center": ["custom/player", "custom/timer", "custom/timer-status"],
-"modules-right": ["clock", "pulseaudio", "memory"],
-
-
-"hyprland/workspaces": {
-	"format": "{icon}",
-	"format-icons": {
-		"1": "   Code",
-		"2": "  Notes",
-		"3": "  Art",
-		"4": "  3D",
-		"5": "  Audio",
-		"6": "  Terminal",
-		"7": "  Music",
-		"8": "  Schedule",
-		"9": "  Monitor 2",
-    "10": "   Testing"
-		}
-},
-
-"custom/player":
-{
-  "exec": "playerctl metadata --format '{{ artist }} - {{ title }}' | sed 's/&/&amp;/g' || echo 'No music'",
-  "return-type": "text",
-  "interval": 2,
-  "on-click": "playerctl play-pause",
-  "on-scroll-down": "playerctl next",
-  "on-scroll-up": "playerctl previous",
-  "on-click-middle": "hyprctl dispatch workspace 7",
-  "tooltip": true,
-  "tooltip-format": "Now playing: {{ artist }} - {{ title }}",
-  "max-length": 40
-},
-
-"custom/timer":
-{
-  "format": "| {} |",
+  "output": "HDMI-A-1",
+  "layer": "top",
+  //"mode": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "position": "top",
+  "spacing": 6,
+  "fixed-center": true,
+  "ipc": true,
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "height": 1,
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "custom/player",
+    "custom/timer",
+    "custom/timer-status",
+    "custom/termusic"
+  ],
+  "modules-right": [
+    "clock",
+    "pulseaudio",
+    "memory"
+  ],
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "   Code",
+      "2": "  Notes",
+      "3": "  Art",
+      "4": "  3D",
+      "5": "  Audio",
+      "6": "  Terminal",
+      "7": "  Music",
+      "8": "  Schedule",
+      "9": "  Monitor 2",
+      "10": "   Debug",
+      "11": "☰ Status"
+    }
+  },
+  "custom/player": {
+    "exec": "playerctl metadata --format '{{ artist }} - {{ title }}' | sed 's/&/&amp;/g' || echo 'No music'",
+    "return-type": "text",
+    "interval": 2,
+    "on-click": "playerctl play-pause",
+    "on-scroll-down": "playerctl next",
+    "on-scroll-up": "playerctl previous",
+    "on-click-middle": "hyprctl dispatch workspace 7",
+    "tooltip": true,
+    "tooltip-format": "Now playing: {{ artist }} - {{ title }}",
+    "max-length": 40
+  },
+  "custom/termusic": {
+    "exec": "/home/zolduck/.config/waybar/scripts/musicBar.sh",
+    "interval": 1,
+    "tooltip": false
+  },
+  "custom/timer": {
+    "format": "| {} |",
     "exec": "/usr/bin/zoltime time",
     "interval": 1,
     "on-click": "bash /usr/bin/zoltime toggle",
     "on-click-right": "bash /usr/bin/zoltime stop",
     "tooltip": false
-},
-
-"custom/timer-status":
-{
+  },
+  "custom/timer-status": {
     "format": "[{}]",
     "exec": "/usr/bin/zoltime status",
     "interval": 1,
     "on-click": "bash /usr/bin/zoltime set-work",
     "on-click-right": "bash /usr/bin/zoltime set-rest",
     "tooltip": false
-},
-
-"clock": {
-  "format": "  {}",
-  "tooltip": true,
-  "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-  "calendar": {
-    "mode": "month",
-    "mode-mon-col": 3,
-    "weeks-pos": "right",
-    "on-click-right": "mode",
-    "on-scroll": 1
   },
-  "actions": {
-    "on-click-right": "mode",
-    "on-scroll-up": "shift_up",
-    "on-scroll-down": "shift_down"
+  "clock": {
+    "format": "  {}",
+    "tooltip": true,
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-click-right": "mode",
+      "on-scroll": 1
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    },
+    "interval": 1,
+    "timezone": null
   },
-  "interval": 1,
-  "timezone": null
-},
-
-"memory": {
-  "format": "  {used:0.1f}G",
-  "tooltip": true
-},
-
-"cpu": {
-  "format": "  {usage}%",
-  "tooltip": true
-},
-
-"pulseaudio": {
-  "format": "   {volume}%",
-  "format-muted": "  Muted",
-  "on-click": "pavucontrol"
-}
-
+  "memory": {
+    "format": "  {used:0.1f}G",
+    "tooltip": true
+  },
+  "cpu": {
+    "format": "  {usage}%",
+    "tooltip": true
+  },
+  "pulseaudio": {
+    "format": "   {volume}%",
+    "format-muted": "  Muted",
+    "on-click": "pavucontrol"
+  }
 }

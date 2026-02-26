@@ -1,0 +1,78 @@
+XTerm*faceName: Terminus
+XTerm*faceSize: 17
+XTerm*renderFont: true
+XTerm*allowBoldFonts: true
+
+XTerm*font:     -misc-fixed-medium-r-normal--13-120-75-75-c-70-iso8859-1
+XTerm*boldFont: -misc-fixed-bold-r-normal--13-120-75-75-c-70-iso8859-1
+
+! Love Ghost - xterm version
+
+*.foreground:   #3a2830
+*.background:   #ebe5e6
+*.cursorColor:  #4a3038
+
+*.selectionForeground: #ebe5e6
+*.selectionBackground: #b8a8b0
+
+! Black (ghostly rose)
+*.color0:  #c0b4b8
+*.color8:  #3a2830
+
+! Red (dusty rose)
+*.color1:  #806068
+*.color9:  #987078
+
+! Green (muted sage)
+*.color2:  #485848
+*.color10: #586858
+
+! Yellow (dusty amber)
+*.color3:  #604838
+*.color11: #705848
+
+! Blue (faded lavender)
+*.color4:  #484058
+*.color12: #585068
+
+! Magenta (rose petal)
+*.color5:  #603848
+*.color13: #704858
+
+! Cyan (misty teal)
+*.color6:  #385050
+*.color14: #486060
+
+! White (pale spirit)
+*.color7:  #b0a8a4
+*.color15: #c8c0bc
+!*.colorIT:
+!*.colorUL:!*.colorIT:
+!*.colorUL:!*.colorIT:
+!*.colorUL:!*.colorIT:
+!*.colorUL:!*.colorIT:
+!*.colorUL:
+/*
+XTerm*faceName: fixed
+XTerm*faceSize: 10
+XTerm*letterSpace: -1
+*/
+XTerm*lineSpace: 0
+XTerm*cursorBlink: false
+
+XTerm*scrollBar: false
+XTerm*saveLines: 5000
+XTerm*scrollTtyOutput: false
+XTerm*scrollKey: true
+
+XTerm*selectToClipboard: true
+XTerm*VT100.translations: #override \
+  Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
+
+XTerm*visualBell: true
+XTerm*bellIsUrgent: true
+
+XTerm*backarrowKey: false
+XTerm*deleteIsDEL: true
+XTerm*ttyModes: erase ^?
