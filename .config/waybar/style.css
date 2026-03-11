@@ -2,12 +2,11 @@ window#waybar
 {
   background: transparent;
 	font-size: 15px;
-	font-family: "Trebuchet MS", sans-serif;
-  -webkit-font-smoothing:none;
+	font-family: "Quincy", sans-serif;
 	padding-top: 0;
 	padding-bottom: 0;
 	margin: 0px;
-  color: rgba(150, 142, 196, 255);
+  color: rgba(240, 240, 240, 255);
 }
 
 .modules-left
@@ -30,7 +29,7 @@ window#waybar
   padding-left: 10px;
   margin: 0;
   background-color: #191916;
-  color: rgba(150, 142, 196, 255);
+  color: rgba(240, 240, 240, 255);
 }
 
 button
